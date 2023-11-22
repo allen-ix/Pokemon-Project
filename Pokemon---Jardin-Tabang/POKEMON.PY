@@ -1,5 +1,5 @@
 class PokemonCard:
-    def __init__(self, name, rarity, hp, card_type, attack, description, weaknesses, retreat_cost, card_number, set_name, release_date, holographic, evolution_stage, abilities):
+    def __init__(self, name, rarity, hp, card_type, attack, description, weaknesses, card_number, release_date, evolution_stage, abilities):
         self.name = name
         self.rarity = rarity
         self.hp = hp
@@ -7,11 +7,8 @@ class PokemonCard:
         self.attack = attack
         self.description = description
         self.weaknesses = weaknesses
-        self.retreat_cost = retreat_cost
         self.card_number = card_number
-        self.set_name = set_name
         self.release_date = release_date
-        self.holographic = holographic
         self.evolution_stage = evolution_stage
         self.abilities = abilities
 
@@ -24,13 +21,10 @@ class PokemonCard:
             f"Attack: {self.attack}\n"
             f"Description: {self.description}\n"
             f"Weaknesses: {', '.join(map(str, self.weaknesses))}\n"
-            f"Retreat Cost: {self.retreat_cost}\n"
             f"Card Number: {self.card_number}\n"
-            f"Set Name: {self.set_name}\n"
             f"Release Date: {self.release_date}\n"
-            f"Holographic: {self.holographic}\n"
             f"Evolution Stage: {self.evolution_stage}\n"
-            f"Abilities: {', '.join(self.abilities)}"
+            f"Special Abilities: {', '.join(self.abilities)}"
         )
 
 class Trainer:
@@ -49,26 +43,26 @@ class Trainer:
         )
 
 # Pokemon cards and assign them to variables
-card1 = PokemonCard("Pikachu", "Common", 60, ["Electric"], "Thunder Shock", "A mouse-like pokemon that can generate electricity.", ["Ground"], 1, 25, "Base Set", "01/09/1999", True, "Basic", ["Static"])
-card2 = PokemonCard("Charizard", "Rare", 150, ["Fire", "Flying"], "Fire Blast", "A dragon-like pokemon that can breathe fire.", ["Water", "Electric", "Rock"], 3, 4, "Base Set", "01/09/1999", True, "Stage 2", ["Blaze"])
-card3 = PokemonCard("Mewtwo", "Rare", 130, ["Psychic"], "Psychic", "A genetically engineered pokemon that has powerful psychic abilities.", ["Dark, Bug, Ghost"], 2 , 10, "Base Set", "01/09/1999", True, "Basic", ["Pressure"])
-card4 = PokemonCard("Bulbasaur", "Common", 50, ["Grass, Poison"] , "Vine Whip", "A plant-like pokemon that has a bulb on its back.", ["Fire, Ice, Flying, Psychic"], 1, 44, "Base Set", "01/09/1999", False, "Basic", ["Overgrow"])
-card5 = PokemonCard("Squirtle", "Common", 40, ["Water"], "Bubble", "A turtle-like pokemon that can squirt water.", ["Electric, Grass"], 1, 63, "Base Set", "01/09/1999", False, "Basic", ["Torrent"])
-card6 = PokemonCard("Eevee", "Common", 50, ["Normal"], "Tackle", "A fox-like pokemon that can evolve into different types.", ["Fighting"], 1, 51, "Jungle", "16/06/1999", False, "Basic", ["Adaptability"])
-card7 = PokemonCard("Snorlax", "Rare", 140, ["Normal"], "Body Slam", "A huge pokemon that likes to sleep and eat.", ["Fighting"], 4, 27, "Jungle", "16/06/1999", True, "Basic", ["Thick Fat"])
-card8 = PokemonCard("Lugia", "Rare", 130, ["Psychic" , "Flying"], "Aeroblast", "A legendary pokemon that can control the wind.", ["Electric, Ice, Dark, Ghost"], 3, 9, "Neo Genesis", "21/12/2000", True, "Basic", ["Pressure"])
-card9 = PokemonCard("Ho-Oh", "Rare", 130, ["Fire" , "Flying"], "Sacred Fire", "A legendary pokemon that can resurrect the dead.", ["Water,Electric, Rock"], 3, 7, "Neo Revelation", "21/09/2001", True, "Basic", ["Regenerator"])
-card10 = PokemonCard("Celebi", "Rare", 70, ["Pyschic" , "Grass"], "Heal Bell", "A mythical pokemon that can travel through time.", ["Fire, Ice, Bug, Ghost, Dark, Flying"], 1, 3, "Neo Destiny", "28/02/2002", True, "Basic", ["Natural Cure"])
-card11 = PokemonCard("Gengar", "Rare", 60, ["Ghost" , "Poison"], "Shadow Punch", "A dark purple, bipedal Pokemon with a roundish body." , ["Ghost ,Dark , Ground, Psychic"] , 2 , 94, "Fossil Expansion" , "06/07/2016" , True , "Final Form" , ["Cursed Body"])
-card12 = PokemonCard("Gyarados", "Rare", 95, ["Water" , "Flying"], "Waterfall", "A piscine, draconic Pokemmon with a long serpentine body coverd in slightly overlapping scales" , ["Electric, Rock "] , 2 , 130, "Base Set" , "1996" , True , "Final Form" , ["Intimidate"])
-card13 = PokemonCard("Mudkip", "Common", 50, ["Water"], "Watergun", "A small, ammphibious, quadrupedal Pokemon." , ["Electric, Grass "] , 1 , 258 , "Generation 3" , "08/12/2017" , False , "Basic" , ["Torrent"])
-card14 = PokemonCard("Meowth", "Rare", 40, ["Normmal"], "Fake out", " A small, feline Pokemon with creamm0colored fur that turns brown at the tips of its hind paws and tail." , ["Fighting"] , 2 , 52, "Jungle" , "06/07/2016" , True , "Basic" , ["Pickup"])
-card15 = PokemonCard("Jigglypuf", "Rare", 115, ["Normmal" , "Fairy"], "Disarming Voice", "A pink pokemon with a spherical body" , ["Steel, Dark "] , 3 ,39 , "Base Set 2" , "28/05/1996" , True , "Basic" , ["Cute Charm"])
-card16 = PokemonCard("Lucario", "Rare", 70, ["Fighting/Steel"], "Metal Claw", "A bipedal, canine-like Pokemon with predominantly blue and black fur" , ["Fire, Fighting, Ground "] , 4 , 448, "Lucario VSTAR Premium Collection" , "05/16/2005" , True , "Final Form" , ["Inner Focus"])
-card17 = PokemonCard("Wobbuffet", "Rare", 190, ["Pyschic"], "Destiny Bond", "A tall, cyan Pokemon with a soft body." , ["Bug, Ghost, Dark"] , 4 , 202, "Heart Gold" , "16/02/2017" , True , "Final Form" , ["Shadow Tag"])
-card18 = PokemonCard("Darkrai", "Rare", 70, ["Dark"], "Dark Pulse", "A black, shadow-like Pokemon. It has a small head with a white fog-like ghostly plume billowing from its head covering one of its bright blue eyes" , ["Bug, Fairy, Fighting"] , 5 , 491, "Darkrai VSTAR Starter Set" , "02/2007" , True , "Final Form" , ["Intimidate"])
-card19 = PokemonCard("Totodile", "Common", 50, ["Water"], "Water Gun", "Is a bipedal, crocodilian Pokemon with well-developed jaws." , ["Electric, Grass "] , 1  , 158, "Gold and Silver" , "16/02/2017" , False , "Basic" , ["Torrent"])
-card20 = PokemonCard("Deoxys", "Rare", 50, ["Pyschic"], "Cosmic Power", "An alien-like, bipedal Pokemon that has four formes. each focused on a different stat." , ["Bug, Ghost, Dark "] , 5 , 186, "EX Deoxys expansion" , "17/06/2004" , True , "Normal Form" , ["Pressure"])
+card1 = PokemonCard("Pikachu", "Common", 60, ["Electric"], "Thunder Shock", "A mouse-like pokemon that can generate electricity.", ["Ground"], 25, "01/09/1999", "Basic", ["Static"])
+card2 = PokemonCard("Charizard", "Rare", 150, ["Fire", "Flying"], "Fire Blast", "A dragon-like pokemon that can breathe fire.", ["Water", "Electric", "Rock"], 6, "01/09/1999", "Stage 2", ["Blaze"])
+card3 = PokemonCard("Mewtwo", "Rare", 130, ["Psychic"], "Psychic", "A genetically engineered pokemon that has powerful psychic abilities.", ["Dark, Bug, Ghost"], 10, "01/09/1999", "Basic", ["Pressure"])
+card4 = PokemonCard("Bulbasaur", "Common", 50, ["Grass, Poison"] , "Vine Whip", "A plant-like pokemon that has a bulb on its back.", ["Fire, Ice, Flying, Psychic"], 44,  "01/09/1999", "Basic", ["Overgrow"])
+card5 = PokemonCard("Squirtle", "Common", 40, ["Water"], "Bubble", "A turtle-like pokemon that can squirt water.", ["Electric, Grass"], 63,  "01/09/1999", "Basic", ["Torrent"])
+card6 = PokemonCard("Eevee", "Common", 50, ["Normal"], "Tackle", "A fox-like pokemon that can evolve into different types.", ["Fighting"], 51, "16/06/1999", "Basic", ["Adaptability"])
+card7 = PokemonCard("Snorlax", "Rare", 140, ["Normal"], "Body Slam", "A huge pokemon that likes to sleep and eat.", ["Fighting"], 27,  "16/06/1999", "Basic", ["Thick Fat"])
+card8 = PokemonCard("Lugia", "Rare", 130, ["Psychic" , "Flying"], "Aeroblast", "A legendary pokemon that can control the wind.", ["Electric, Ice, Dark, Ghost"], 9,  "21/12/2000", "Basic", ["Pressure"])
+card9 = PokemonCard("Ho-Oh", "Rare", 130, ["Fire" , "Flying"], "Sacred Fire", "A legendary pokemon that can resurrect the dead.", ["Water,Electric, Rock"], 7,  "21/09/2001", "Basic", ["Regenerator"])
+card10 = PokemonCard("Celebi", "Rare", 70, ["Pyschic" , "Grass"], "Heal Bell", "A mythical pokemon that can travel through time.", ["Fire, Ice, Bug, Ghost, Dark, Flying"], 3,  "28/02/2002", "Basic", ["Natural Cure"])
+card11 = PokemonCard("Gengar", "Rare", 60, ["Ghost" , "Poison"], "Shadow Punch", "A dark purple, bipedal Pokemon with a roundish body." , ["Ghost ,Dark , Ground, Psychic"] , 94,"06/07/2016" , "Final Form" , ["Cursed Body"])
+card12 = PokemonCard("Gyarados", "Rare", 95, ["Water" , "Flying"], "Waterfall", "A piscine, draconic Pokemmon with a long serpentine body coverd in slightly overlapping scales" , ["Electric, Rock "] , 130,  "1996" , "Final Form" , ["Intimidate"])
+card13 = PokemonCard("Mudkip", "Common", 50, ["Water"], "Watergun", "A small, ammphibious, quadrupedal Pokemon." , ["Electric, Grass "] , 258  , "08/12/2017" , "Basic" , ["Torrent"])
+card14 = PokemonCard("Meowth", "Rare", 40, ["Normmal"], "Fake out", " A small, feline Pokemon with creamm0colored fur that turns brown at the tips of its hind paws and tail." , ["Fighting"]  , 52,  "06/07/2016" , "Basic" , ["Pickup"])
+card15 = PokemonCard("Jigglypuf", "Rare", 115, ["Normmal" , "Fairy"], "Disarming Voice", "A pink pokemon with a spherical body" , ["Steel, Dark "]  ,39  , "28/05/1996" , "Basic" , ["Cute Charm"])
+card16 = PokemonCard("Lucario", "Rare", 70, ["Fighting/Steel"], "Metal Claw", "A bipedal, canine-like Pokemon with predominantly blue and black fur" , ["Fire, Fighting, Ground "] , 448 , "05/16/2005" , "Final Form" , ["Inner Focus"])
+card17 = PokemonCard("Wobbuffet", "Rare", 190, ["Pyschic"], "Destiny Bond", "A tall, cyan Pokemon with a soft body." , ["Bug, Ghost, Dark"] , 202 , "16/02/2017" , "Final Form" , ["Shadow Tag"])
+card18 = PokemonCard("Darkrai", "Rare", 70, ["Dark"], "Dark Pulse", "A black, shadow-like Pokemon. It has a small head with a white fog-like ghostly plume billowing from its head covering one of its bright blue eyes" , ["Bug, Fairy, Fighting"] , 491 , "02/2007" , "Final Form" , ["Intimidate"])
+card19 = PokemonCard("Totodile", "Common", 50, ["Water"], "Water Gun", "Is a bipedal, crocodilian Pokemon with well-developed jaws." , ["Electric, Grass "]  , 158 , "16/02/2017", "Basic" , ["Torrent"])
+card20 = PokemonCard("Deoxys", "Rare", 50, ["Pyschic"], "Cosmic Power", "An alien-like, bipedal Pokemon that has four forms. Each focused on a different stat." , ["Bug, Ghost, Dark "] , 186, "17/06/2004" , "Normal Form" , ["Pressure"])
 
 
 trainer1 = Trainer("Ash", 10, "Pallet Town", "ash@pokemon.com")
