@@ -28,18 +28,18 @@ class PokemonCard:
         )
 
 class Trainer:
-    def __init__(self, name, age, location, email_address):
+    def __init__(self, name, birthdate, location, email):
         self.name = name
-        self.age = age
+        self.birthdate = birthdate
         self.location = location
-        self.email_address = email_address
+        self.email = email
 
     def show_info(self):
         print(
             f"Name: {self.name}\n"
-            f"Age: {self.age}\n"
+            f"Age: {self.birthdate}\n"
             f"Location: {self.location}\n"
-            f"Email: {self.email_address}"
+            f"Email: {self.email}"
         )
 
 # Pokemon cards and assign them to variables
@@ -106,16 +106,16 @@ card20 = PokemonCard(name= "Deoxys",rarity= "Rare",hp= 50,card_type= "Pyschic",a
                     weakness= "Dark" ,card_number= 186 ,release_date="2004-11-18", evolution_stage= "Basic" ,abilities= "Pressure")
 
 
-trainer1 = Trainer(name="Ash", age= "1987-05-22",location= "Pallet Town",email_address= "ash@pokemon.com") 
-trainer2 = Trainer(name= "Gary",age= "1984-08-06",location= "Pallet Town",email_address= "gary@pokemon.com")
-trainer3 = Trainer(name="Giovanni",age= "1983-06-01",location= "Viridian City",email_address= "giovanni@teamrocket.com")
-trainer4 = Trainer(name="Silver",age= "2007-12-24",location= "Johto City",email_address= "silver@pokemon.com")
-trainer5 = Trainer(name="Gold",age= "2007-07-21",location= "Erika City",email_address= "Erika@pokemon.com")
-trainer6 = Trainer(name="Steven",age= "1974-11-02",location= "Ever Grande City",email_address= "stevenstone@pokemon.com")
-trainer7 = Trainer(name="Roxanne",age= "2005-07-02" ,location= "Rustboro City" ,email_address= "roxanne@pokemon.com" )
-trainer8 = Trainer(name="Aaron" ,age= "2002-10-06" ,location= "Sinoh Region" ,email_address= "aaronelitefor@pokemon.com")
-trainer9 = Trainer(name="Ronald",age= "2003-06-27",location= "Buncag Grounds",email_address= "ronaldpogi@pokemon.com")
-trainer10 = Trainer(name="Cedric" ,age= "2004-06-02" ,location= "Bunkhose" ,email_address= "cedric@pokemon.com")
+trainer1 = Trainer(name="Ash", birthdate= "1987-05-22",location= "Pallet Town",email= "ash@pokemon.com") 
+trainer2 = Trainer(name= "Gary",birthdate= "1984-08-06",location= "Pallet Town",email= "gary@pokemon.com")
+trainer3 = Trainer(name="Giovanni",birthdate= "1983-06-01",location= "Viridian City",email= "giovanni@teamrocket.com")
+trainer4 = Trainer(name="Silver",birthdate= "2007-12-24",location= "Johto City",email= "silver@pokemon.com")
+trainer5 = Trainer(name="Gold",birthdate= "2007-07-21",location= "Erika City",email= "Erika@pokemon.com")
+trainer6 = Trainer(name="Steven",birthdate= "1974-11-02",location= "Ever Grande City",email= "stevenstone@pokemon.com")
+trainer7 = Trainer(name="Roxanne",birthdate= "2005-07-02" ,location= "Rustboro City" ,email= "roxanne@pokemon.com" )
+trainer8 = Trainer(name="Aaron" ,birthdate= "2002-10-06" ,location= "Sinoh Region" ,email= "aaronelitefor@pokemon.com")
+trainer9 = Trainer(name="Ronald",birthdate= "2003-06-27",location= "Buncag Grounds",email= "ronaldpogi@pokemon.com")
+trainer10 = Trainer(name="Cedric" ,birthdate= "2004-06-02" ,location= "Bunkhose" ,email= "cedric@pokemon.com")
 
 pokemon_cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14, card15, card16, card17, card18, card19, card20]
 trainers = [trainer1, trainer2, trainer3, trainer4, trainer5, trainer6, trainer7, trainer8, trainer9, trainer10]
