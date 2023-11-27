@@ -3,13 +3,13 @@ class PokemonCard:
         self.name = name
         self.rarity = rarity
         self.hp = hp
-        self.card_type = [card_type] if isinstance(card_type, str) else card_type
+        self.card_type = card_type
         self.attack = attack
         self.description = description
-        self.weaknesses = [weakness] if isinstance(weakness, str) else weakness
+        self.weaknesses = weakness
         self.card_number = card_number
         self.evolution_stage = evolution_stage
-        self.abilities = [abilities] if isinstance(abilities, str) else abilities
+        self.abilities = abilities
         self.release_date = release_date
 
     def show_info(self):
@@ -17,14 +17,14 @@ class PokemonCard:
             f"Name: {self.name}\n"
             f"Rarity: {self.rarity}\n"
             f"HP: {self.hp}\n"
-            f"Card Types: {', '.join(self.card_type)}\n"
+            f"Card Types: {(self.card_type)}\n"
             f"Attack: {self.attack}\n"
             f"Description: {self.description}\n"
-            f"Weaknesses: {', '.join(map(str, self.weaknesses))}\n"
+            f"Weaknesses: {(self.weaknesses)}\n"
             f"Card Number: {self.card_number}\n"
             f"Release Date: {self.release_date}\n"
             f"Evolution Stage: {self.evolution_stage}\n"
-            f"Special Abilities: {', '.join(self.abilities)}"
+            f"Special Abilities: {(self.abilities)}"
         )
 
 class Trainer:
